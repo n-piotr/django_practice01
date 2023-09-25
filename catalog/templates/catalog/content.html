@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Shop</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+{% for car in car_obj %}
+  <div class="row">
+    <div class="car-image">
+      <img src="{{ car.image.url }}" alt="Car">
+    </div>
+    <div class="car-info">
+      <h3>{{ car.title }}</h3>
+      <div class="car-details">
+        <div>
+      <span class="item-name">Год выпуска:</span>
+          <span>{{ car.year }}</span>
+        </div>
+        <div>
+      <span class="item-name">Мощность:</span>
+          <span>{{ car.power }} л.с.</span>
+        </div>
+        <div>
+          <span> </span>
+        </div>
+        <div>
+      <span class="item-name">Тип:</span>
+          <span>{{ car.type }}</span>
+        </div>
+        <div>
+      <span class="item-name">Пробег:</span>
+          <span>{{ car.kms }} км</span>
+        </div>
+        <div>
+          <span class="car-price">{{ car.price }} $</span>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+<a class="copyright" href="http://www.freepik.com">Illustrations by macrovector / Freepik</a>
+</body>
+</html>
