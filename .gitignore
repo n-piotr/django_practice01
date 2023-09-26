@@ -3,4 +3,4 @@ venv/
 .idea/
 db.sqlite3
 temp.txt
-media/car_images/*
+media/car_images/*.png
